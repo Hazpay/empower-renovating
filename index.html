@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Core Meta Tags -->
+  <!-- Core Meta Tags (SEO-optimized: unique title/description, canonical) -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empower Teams: AI as a Team Member — Automate Routine, Boost Productivity</title>
-  <meta name="description" content="Integrate AI into team processes: document processing, data analysis, client communication. Save 10+ hours weekly and reduce errors by 40%. Free demo in 15 minutes.">
+  <title>Empower Teams: AI Agile Coaching | Free 30-Min Consultation</title>
+  <meta name="description" content="Integrate AI as a team member: automate document processing, data analysis, and client communication. Save 10+ hours weekly and reduce errors by 40%. Schedule a free 30-minute consultation.">
   
-  <!-- SEO & Structured Data -->
-  <link rel="canonical" href="https://empower-team.ai/">
+  <!-- SEO & Structured Data (Schema.org for Organization, affiliates, and team members) -->
+  <link rel="canonical" href="https://hazpay.github.io/empower-renovating/indextest.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Empower Teams.AI",
-    "url": "https://empower-team.ai",
-    "logo": "https://empower-team.ai/logo.svg",
+    "url": "https://hazpay.github.io/empower-renovating/",
+    "logo": "https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/empower-logo.svg", /* Placeholder; replace if exists */
     "sameAs": [
       "https://linkedin.com/company/empower-teams",
       "https://twitter.com/empowerteamsai"
+    ],
+    "affiliate": [
+      {"@type": "Organization", "name": "Amdocs"},
+      {"@type": "Organization", "name": "Bank Leumi"},
+      {"@type": "Organization", "name": "Credit Guard"},
+      {"@type": "Organization", "name": "Cynet"},
+      {"@type": "Organization", "name": "Eccopia"},
+      {"@type": "Organization", "name": "Mellanox"},
+      {"@type": "Organization", "name": "Siemens"}
+    ],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Dr. Dror Zernik",
+        "jobTitle": "CEO & AI Strategist",
+        "image": "https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/team/dror-1.jpg"
+      }
+      /* Add others if photos available */
     ]
   }
   </script>
   
-  <!-- Open Graph -->
+  <!-- Open Graph for Social Sharing -->
   <meta property="og:title" content="Empower Teams: AI as a Team Member">
-  <meta property="og:description" content="Automate routine, analytics, and growth. Schedule a free demo.">
-  <meta property="og:image" content="https://empower-team.ai/og-image.jpg">
-  <meta property="og:url" content="https://empower-team.ai">
+  <meta property="og:description" content="Automate routine tasks and boost productivity. Free 30-min consultation.">
+  <meta property="og:image" content="https://hazpay.github.io/empower-renovating/og-image.jpg"> <!-- Placeholder; optimize real image -->
+  <meta property="og:url" content="https://hazpay.github.io/empower-renovating/indextest.html">
   <meta property="og:type" content="website">
 
-  <!-- Favicon -->
+  <!-- Favicon (Placeholder; add real) -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Google Fonts (max 2 fonts) -->
+  <!-- Google Fonts: Max 2 fonts (Inter for body/headings) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Inline CSS (structured for single file) -->
+  <!-- Inline CSS: BEM-like, CSS Vars, Flex/Grid, Mobile-First -->
   <style>
-    /* === CSS Custom Properties === */
+    /* === CSS Custom Properties (Modern palette: AI-blue theme) === */
     :root {
       --primary: #007BFF;     /* Primary blue — AI theme */
       --secondary: #6C757D;   /* Gray for secondary text */
       --accent: #28A745;      /* Green for CTA/success */
       --background: #F8F9FA;  /* Light background */
-      --surface: #FFFFFF;     /* Cards */
+      --surface: #FFFFFF;     /* Cards/white surfaces */
       --text: #212529;        /* Main text */
-      --radius: 12px;         /* Border radius */
-      --transition: all 0.3s ease;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --radius: 12px;         /* Border radius (neumorphism-inspired) */
+      --transition: all 0.3s ease; /* Smooth transitions */
+      --shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtle shadow */
     }
+    /* Dark Mode Support (prefers-color-scheme) */
     @media (prefers-color-scheme: dark) {
       :root {
         --background: #121212;
@@ -59,12 +78,12 @@
       }
     }
 
-    /* === Global Reset & Typography === */
+    /* === Global Reset & Typography (Line-height 1.6, >=16px base) === */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 100%; }
+    html { scroll-behavior: smooth; font-size: 100%; } /* Smooth scrolling */
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      font-size: 1rem;            /* ≥16px */
+      font-size: 1rem;            /* Base 16px */
       line-height: 1.6;
       color: var(--text);
       background: var(--background);
@@ -75,17 +94,17 @@
     a { color: var(--primary); text-decoration: none; transition: var(--transition); }
     a:hover { opacity: 0.8; }
     img { max-width: 100%; height: auto; display: block; }
-    button, input, textarea { font: inherit; }
+    button, input, textarea { font: inherit; } /* Inherit font for consistency */
 
-    /* === Layout Utilities === */
+    /* === Layout Utilities (Mobile-First: rem/% units, breakpoints) === */
     .container { width: min(90%, 1200px); margin: 0 auto; padding: 0 1rem; }
-    .section { padding: 4rem 0; }
-    .grid { display: grid; gap: 2rem; }
+    .section { padding: 4rem 0; } /* Default section padding */
+    .grid { display: grid; gap: 2rem; } /* CSS Grid for features/testimonials */
     @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
     .text-center { text-align: center; }
 
-    /* === Header === */
+    /* === Header (Sticky nav, mobile hamburger) === */
     header {
       background: var(--surface);
       box-shadow: var(--shadow);
@@ -95,29 +114,29 @@
       display: flex; justify-content: space-between; align-items: center;
       padding: 1rem 0;
     }
-    .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); }
+    .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); } /* Logo links to home */
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-weight: 600; }
-    .mobile-toggle { display: none; cursor: pointer; }
-    @media (max-width: 768px) {
+    .mobile-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+    @media (max-width: 768px) { /* Mobile: 320px+ breakpoint */
       .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--surface); padding: 1rem; box-shadow: var(--shadow); }
       .nav-links.active { display: flex; }
-      .mobile-toggle { display: block; }
+      .mobile-toggle { display: block; min-width: 44px; min-height: 44px; } /* Touch-target >44px */
     }
 
-    /* === Hero (Hero Section) === */
+    /* === Hero Section (Gradient bg, centered, benefit cards) === */
     .hero {
-      background: linear-gradient(135deg, rgba(0,123,255,0.05), rgba(40,167,69,0.05));
+      background: linear-gradient(135deg, rgba(0,123,255,0.05), rgba(40,167,69,0.05)); /* Subtle glassmorphism */
       padding: 6rem 0 4rem;
       text-align: center;
     }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; color: var(--primary); }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; color: var(--primary); } /* Responsive heading */
     .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem; color: var(--secondary); }
     .benefits { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
     .benefit { background: var(--surface); padding: 1rem 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); min-width: 200px; }
     .benefit strong { display: block; font-size: 1.5rem; color: var(--accent); }
 
-    /* === CTA Button === */
+    /* === CTA Buttons (Prominent, hover effects) === */
     .cta {
       background: var(--accent);
       color: #fff;
@@ -131,12 +150,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      min-width: 44px; min-height: 44px; /* A11y touch-target */
     }
-    .cta:hover { background: #218838; transform: translateY(-2px); }
+    .cta:hover { background: #218838; transform: translateY(-2px); } /* Lift on hover */
     .cta-secondary { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
     .cta-secondary:hover { background: var(--primary); color: #fff; }
 
-    /* === Sections === */
+    /* === General Sections (Titles, Cards with hover) === */
     .section-title { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: var(--primary); }
     .card {
       background: var(--surface);
@@ -145,14 +165,38 @@
       box-shadow: var(--shadow);
       transition: var(--transition);
     }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-    .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); } /* Neumorphism lift */
+    .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; } /* Emoji icons for features */
 
-    /* === Social Proof === */
-    .logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin: 2rem 0; opacity: 0.7; }
-    .logos img { height: 40px; filter: grayscale(100%); transition: filter 0.3s; }
-    .logos img:hover { filter: grayscale(0); }
+    /* === Trusted By Logos (8 items, responsive flex, grayscale hover) === */
+    .logos { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 1.5rem; 
+      margin: 2rem 0; 
+      opacity: 0.7; 
+      align-items: center;
+    }
+    .logos img { 
+      height: 40px; 
+      max-width: 150px; 
+      filter: grayscale(100%); 
+      transition: var(--transition); 
+      border-radius: var(--radius); 
+      box-shadow: var(--shadow);
+    }
+    .logos img:hover { 
+      filter: grayscale(0%) brightness(1.1); 
+      transform: scale(1.05); 
+    }
+    @media (min-width: 768px) { .logos { gap: 2rem; } }
+    @media (max-width: 768px) { 
+      .logos { gap: 1rem; }
+      .logos img { height: 35px; }
+    }
 
+    /* === Testimonials (Quote styling, author flex) === */
     .testimonial {
       background: var(--surface);
       padding: 1.5rem;
@@ -164,16 +208,25 @@
     .testimonial-author { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
     .testimonial-author img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
 
-    /* === Team === */
+    /* === Team Members (Centered cards, real photo for Dror) === */
     .team-member { text-align: center; }
-    .team-member img { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 1rem; object-fit: cover; }
+    .team-member img { 
+      width: 120px; 
+      height: 120px; 
+      border-radius: 50%; 
+      margin-bottom: 1rem; 
+      object-fit: cover; 
+      box-shadow: var(--shadow); 
+      transition: var(--transition);
+    }
+    .team-member img:hover { transform: scale(1.05); }
 
-    /* === Blog Teaser === */
+    /* === Blog Cards (Article teasers) === */
     .blog-card { background: var(--surface); padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); }
     .blog-card h3 { margin-bottom: 0.5rem; }
     .blog-card time { font-size: 0.875rem; color: var(--secondary); }
 
-    /* === Footer === */
+    /* === Footer (Links, contacts, social icons) === */
     footer {
       background: var(--surface);
       margin-top: auto;
@@ -184,9 +237,9 @@
     }
     .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
     .social { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
-    .social a { font-size: 1.5rem; }
+    .social a { font-size: 1.5rem; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
 
-    /* === Modal (for demo form) === */
+    /* === Modal Form (Overlay, accessible dialog) === */
     .modal {
       position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 2000;
     }
@@ -194,22 +247,22 @@
     .modal-content {
       background: var(--surface); padding: 2rem; border-radius: var(--radius); max-width: 500px; width: 90%; position: relative;
     }
-    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; min-width: 44px; min-height: 44px; }
 
-    /* === Form Styles === */
+    /* === Form Styles (Validation-ready, focus states) === */
     .form-group { margin-bottom: 1rem; }
     .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
     .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ced4da; border-radius: var(--radius); }
-    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,123,255,0.2); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,123,255,0.2); } /* Focus ring */
 
-    /* === Animations === */
+    /* === Animations (Fade-in on scroll, staggered delays) === */
     @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .animate { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
     .delay-1 { animation-delay: 0.1s; }
     .delay-2 { animation-delay: 0.2s; }
     .delay-3 { animation-delay: 0.3s; }
 
-    /* === Responsive Adjustments === */
+    /* === Responsive Adjustments (Breakpoints: 480px for small mobile) === */
     @media (max-width: 480px) {
       .hero { padding: 4rem 0 3rem; }
       .section { padding: 3rem 0; }
@@ -218,25 +271,26 @@
   </style>
 </head>
 <body>
-  <!-- ==================== HEADER ==================== -->
+  <!-- ==================== HEADER (Semantic banner, sticky nav) ==================== -->
   <header role="banner">
     <div class="container nav">
-      <a href="#" class="logo" aria-label="Empower Teams — Home">Empower Teams</a>
+      <a href="#hero" class="logo" aria-label="Empower Teams — Home">Empower Teams</a>
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#services">Features</a>
+        <a href="#trusted">Trusted By</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#team">Team</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="mobile-toggle" aria-label="Open menu" id="mobileToggle">☰</button>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" id="mobileToggle">☰</button>
     </div>
   </header>
 
-  <!-- ==================== HERO (Hero Section) ==================== -->
-  <section class="hero" id="hero">
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
     <div class="container">
-      <h1 class="animate">AI as a Member of Your Team</h1>
+      <h1 id="hero-title" class="animate">AI as a Member of Your Team</h1>
       <p class="animate delay-1">Automate routine tasks: document processing, data analysis, and client communication. Save 10+ hours per week and reduce errors by 40%.</p>
       
       <div class="benefits animate delay-2">
@@ -245,17 +299,17 @@
         <div class="benefit"><strong>30 min</strong> free consultation</div>
       </div>
       
-      <button class="cta animate delay-3" id="openDemo">
+      <button class="cta animate delay-3" id="openDemo" aria-label="Open consultation form">
         Request Free Consultation <span aria-hidden="true">→</span>
       </button>
       <p style="margin-top:0.5rem; font-size:0.875rem; color:var(--secondary);">30 min consultation • Free</p>
     </div>
   </section>
 
-  <!-- ==================== SERVICES (Features) ==================== -->
-  <section class="section" id="services">
+  <!-- ==================== FEATURES SECTION ==================== -->
+  <section class="section" id="services" aria-labelledby="services-title">
     <div class="container">
-      <h2 class="section-title animate">What You'll Get</h2>
+      <h2 id="services-title" class="section-title animate">What You'll Get</h2>
       <div class="grid">
         <div class="card animate delay-1">
           <div class="feature-icon" role="img" aria-label="Analytics">📊</div>
@@ -276,78 +330,74 @@
     </div>
   </section>
 
-  <!-- ==================== SOCIAL PROOF (Trusted By) ==================== -->
-  <section class="section bg-light" style="background:var(--background);">
+  <!-- ==================== TRUSTED BY SECTION ==================== -->
+  <section class="section" id="trusted" style="background:var(--background);" aria-labelledby="trusted-title">
     <div class="container text-center">
-      <h2 class="section-title animate">Trusted By</h2>
-      <div class="logos animate delay-1">
-        <!-- Logos sourced from https://empower-team.ai/dr-dror-zernik/ (Tufin, Elbit, Intel, plus additional mentioned: Amdocs, Philips, GE) -->
-        <img src="https://via.placeholder.com/150x50?text=Tufin" alt="Tufin Logo" loading="lazy">
-        <img src="https://via.placeholder.com/150x50?text=Elbit" alt="Elbit Logo" loading="lazy">
-        <img src="https://via.placeholder.com/150x50?text=Intel" alt="Intel Logo" loading="lazy">
-        <img src="https://via.placeholder.com/150x50?text=Amdocs" alt="Amdocs Logo" loading="lazy">
-        <img src="https://via.placeholder.com/150x50?text=Philips" alt="Philips Logo" loading="lazy">
-        <img src="https://via.placeholder.com/150x50?text=GE" alt="GE Logo" loading="lazy">
+      <h2 id="trusted-title" class="section-title animate">Trusted By</h2>
+      <p class="animate delay-1" style="max-width: 600px; margin: 0 auto 2rem; color:var(--secondary);">Leading companies in tech, finance, security, and innovation rely on Empower Teams for AI-driven Agile transformations.</p>
+      <div class="logos animate delay-2" role="list" aria-label="Partner and client logos">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/Amdocs-590x130-logo-300x66-1.png" alt="Amdocs Logo - Telecom Solutions Provider" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/bank-leumi-250x75-1.png" alt="Bank Leumi Logo - Leading Israeli Bank" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/checkmarks-250.png" alt="Checkmarks Icon - Success Indicators" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/credit-guard-logo-trans.webp" alt="Credit Guard Logo - Fintech Payments" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/cynet.png" alt="Cynet Logo - Cybersecurity Platform" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/eccopia.png" alt="Eccopia Logo - Tech Consulting Partner" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/mellanox-300x75-logo.png" alt="Mellanox Logo - Networking Technology (NVIDIA)" loading="lazy" height="40">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/siemens-logo-trans-250x39-1.webp" alt="Siemens Logo - Industrial Technology Leader" loading="lazy" height="40">
       </div>
+      <noscript>
+        <p style="font-size: 0.875rem; color: var(--secondary); margin-top: 1rem;">Trusted partners: Amdocs, Bank Leumi, Credit Guard, Cynet, Eccopia, Mellanox, Siemens, and more.</p>
+      </noscript>
     </div>
   </section>
 
-  <!-- ==================== TESTIMONIALS ==================== -->
-  <section class="section" id="testimonials">
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section class="section" id="testimonials" aria-labelledby="testimonials-title">
     <div class="container">
-      <h2 class="section-title animate">What Our Clients Say</h2>
+      <h2 id="testimonials-title" class="section-title animate">What Our Clients Say</h2>
       <div class="grid">
         <div class="testimonial animate delay-1">
           <p>"AI analytics saved us from a deadline miss—the system predicted risks a week in advance."</p>
           <div class="testimonial-author">
-            <img src="https://via.placeholder.com/50" alt="" loading="lazy">
-            <div>
-              <strong>Alex Johnson</strong><br>
-              <span>CEO, TechStart</span>
-            </div>
+            <img src="https://via.placeholder.com/50" alt="Photo of Alex Johnson" loading="lazy">
+            <div><strong>Alex Johnson</strong><br><span>CEO, TechStart</span></div>
           </div>
         </div>
         <div class="testimonial animate delay-2">
           <p>"Processing 500+ documents daily now takes just 10 minutes. Our team is free for strategic tasks."</p>
           <div class="testimonial-author">
-            <img src="https://via.placeholder.com/50" alt="" loading="lazy">
-            <div>
-              <strong>Michael Davis</strong><br>
-              <span>CTO, DataFlow</span>
-            </div>
+            <img src="https://via.placeholder.com/50" alt="Photo of Michael Davis" loading="lazy">
+            <div><strong>Michael Davis</strong><br><span>CTO, DataFlow</span></div>
           </div>
         </div>
         <div class="testimonial animate delay-3">
           <p>"The chatbot responds faster than our best manager. Conversion rates increased by 25%."</p>
           <div class="testimonial-author">
-            <img src="https://via.placeholder.com/50" alt="" loading="lazy">
-            <div>
-              <strong>Emily Wilson</strong><br>
-              <span>Head of Sales, GrowEasy</span>
-            </div>
+            <img src="https://via.placeholder.com/50" alt="Photo of Emily Wilson" loading="lazy">
+            <div><strong>Emily Wilson</strong><br><span>Head of Sales, GrowEasy</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== TEAM ==================== -->
-  <section class="section bg-light" id="team" style="background:var(--background);">
+  <!-- ==================== TEAM SECTION ==================== -->
+  <section class="section" id="team" style="background:var(--background);" aria-labelledby="team-title">
     <div class="container">
-      <h2 class="section-title animate">Our Team</h2>
+      <h2 id="team-title" class="section-title animate">Our Team</h2>
       <div class="grid">
         <div class="team-member animate delay-1">
-          <img src="https://via.placeholder.com/120" alt="Photo of Dr. Dror Zernik" loading="lazy">
+          <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/team/dror-1.jpg" alt="Dr. Dror Zernik - CEO & AI Strategist at Empower Teams" loading="lazy">
           <h3>Dr. Dror Zernik</h3>
           <p>CEO &amp; AI Strategist<br><em>30+ years in tech, 15+ in Agile coaching</em></p>
         </div>
         <div class="team-member animate delay-2">
-          <img src="https://via.placeholder.com/120" alt="Photo of Olga Kuznetsova" loading="lazy">
+          <img src="https://via.placeholder.com/120" alt="Photo of Olga Kuznetsova - CTO & ML Engineer" loading="lazy">
           <h3>Olga Kuznetsova</h3>
           <p>CTO &amp; ML Engineer<br><em>PhD in Machine Learning</em></p>
         </div>
         <div class="team-member animate delay-3">
-          <img src="https://via.placeholder.com/120" alt="Photo of Dmitry Volkov" loading="lazy">
+          <img src="https://via.placeholder.com/120" alt="Photo of Dmitry Volkov - Head of Product" loading="lazy">
           <h3>Dmitry Volkov</h3>
           <p>Head of Product<br><em>Ex-PM at Yandex</em></p>
         </div>
@@ -355,32 +405,32 @@
     </div>
   </section>
 
-  <!-- ==================== BLOG TEASER ==================== -->
-  <section class="section" id="blog">
+  <!-- ==================== BLOG TEASER SECTION ==================== -->
+  <section class="section" id="blog" aria-labelledby="blog-title">
     <div class="container">
-      <h2 class="section-title animate">Useful Resources</h2>
+      <h2 id="blog-title" class="section-title animate">Useful Resources</h2>
       <div class="grid">
         <article class="blog-card animate delay-1">
           <time datetime="2025-10-20">October 20, 2025</time>
           <h3>How to Implement AI in Small Business Without a Budget</h3>
           <p>Step-by-step guide + free tools.</p>
-          <a href="#" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;">Read More →</a>
+          <a href="/blog/ai-small-business.html" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;" aria-label="Read article: How to Implement AI in Small Business">Read More →</a> <!-- Placeholder real href -->
         </article>
         <article class="blog-card animate delay-2">
           <time datetime="2025-09-15">September 15, 2025</time>
           <h3>5 Metrics AI Can Improve in Your Team</h3>
           <p>From speed to employee satisfaction.</p>
-          <a href="#" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;">Read More →</a>
+          <a href="/blog/ai-metrics.html" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;" aria-label="Read article: 5 Metrics AI Can Improve">Read More →</a>
         </article>
         <article class="blog-card animate delay-3">
           <time datetime="2025-08-10">August 10, 2025</time>
           <h3>Case Study: How AI Reduced Reporting Time by 90%</h3>
           <p>A real client story.</p>
-          <a href="#" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;">Read More →</a>
+          <a href="/blog/ai-case-study.html" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;" aria-label="Read article: AI Case Study">Read More →</a>
         </article>
       </div>
       <p class="text-center" style="margin-top:2rem;">
-        <a href="#" class="cta">All Articles →</a>
+        <a href="/blog" class="cta" aria-label="View all blog articles">All Articles →</a>
       </p>
     </div>
   </section>
@@ -391,6 +441,7 @@
       <div class="footer-links">
         <a href="#hero">Home</a>
         <a href="#services">Features</a>
+        <a href="#trusted">Trusted By</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#team">Team</a>
         <a href="#blog">Blog</a>
@@ -398,29 +449,29 @@
       <p>&copy; 2025 Empower Teams. All rights reserved.</p>
       <p>
         <a href="mailto:info@empower-team.ai">info@empower-team.ai</a> • 
-        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        <a href="tel:+972123456789">+972 12 345 6789</a> <!-- IL country code -->
       </p>
       <div class="social">
-        <a href="#" aria-label="LinkedIn" target="_blank">📱</a>
-        <a href="#" aria-label="Twitter" target="_blank">🐦</a>
-        <a href="#" aria-label="Telegram" target="_blank">✈️</a>
+        <a href="https://linkedin.com/company/empower-teams" aria-label="LinkedIn" target="_blank" rel="noopener">📱</a>
+        <a href="https://twitter.com/empowerteamsai" aria-label="Twitter" target="_blank" rel="noopener">🐦</a>
+        <a href="https://t.me/empowerteams" aria-label="Telegram" target="_blank" rel="noopener">✈️</a>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== DEMO MODAL ==================== -->
+  <!-- ==================== CONSULTATION MODAL ==================== -->
   <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-content">
-      <button class="modal-close" aria-label="Close" id="closeModal">×</button>
-      <h2 id="modalTitle">Request Demo</h2>
+      <button class="modal-close" aria-label="Close form" id="closeModal">×</button>
+      <h2 id="modalTitle">Request Consultation</h2>
       <form id="demoForm" novalidate>
         <div class="form-group">
           <label for="name">Name *</label>
-          <input type="text" id="name" required placeholder="John Doe">
+          <input type="text" id="name" required placeholder="John Doe" aria-required="true">
         </div>
         <div class="form-group">
           <label for="email">Email *</label>
-          <input type="email" id="email" required placeholder="john@example.com">
+          <input type="email" id="email" required placeholder="john@example.com" aria-required="true">
         </div>
         <div class="form-group">
           <label for="company">Company</label>
@@ -436,76 +487,70 @@
     </div>
   </div>
 
-  <!-- ==================== JS (ES6+, modular in single file) ==================== -->
+  <!-- ==================== JS: ES6+, No external deps ==================== -->
   <script>
-    // === Mobile Menu ===
+    // Mobile Menu Toggle (A11y: aria-expanded)
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
-    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('active');
+      });
+    }
 
-    // === Demo Modal ===
+    // Modal Handling (Keyboard: ESC, click outside; A11y focus trap simplified)
     const openBtn = document.getElementById('openDemo');
     const modal = document.getElementById('demoModal');
     const closeBtn = document.getElementById('closeModal');
     const form = document.getElementById('demoForm');
+    if (openBtn && modal && closeBtn && form) {
+      openBtn.addEventListener('click', () => modal.classList.add('active'));
+      closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+      modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+      document.addEventListener('keydown', (e) => { 
+        if (e.key === 'Escape' && modal.classList.contains('active')) modal.classList.remove('active'); 
+      });
+    }
 
-    openBtn.addEventListener('click', () => modal.classList.add('active'));
-    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('active')) modal.classList.remove('active'); });
+    // Form Submission (Native validation + placeholder fetch)
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const data = new FormData(form);
+        try {
+          // Replace with real endpoint, e.g., Netlify/Formspree: await fetch('/', { method: 'POST', body: data });
+          alert('Request submitted! We\'ll contact you soon.');
+          modal.classList.remove('active');
+          form.reset();
+        } catch (err) {
+          console.error('Submission error:', err);
+          alert('Error. Please try again.');
+        }
+      });
+    }
 
-    // === Form Validation (real-time + submit) ===
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      const data = new FormData(form);
-      // Example submission (replace with your endpoint)
-      try {
-        // await fetch('/api/demo', { method: 'POST', body: data });
-        alert('Request submitted! We\'ll contact you soon.');
-        modal.classList.remove('active');
-        form.reset();
-      } catch (err) {
-        alert('Submission error. Please try again.');
-      }
-    });
-
-    // === Scroll Animations (Intersection Observer) ===
+    // Scroll Animations (Intersection Observer for performance)
     const animItems = document.querySelectorAll('.animate');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
+          entry.target.style.opacity = '1';
           entry.target.style.transform = 'translateY(0)';
         }
       });
     }, { threshold: 0.1 });
     animItems.forEach(item => {
-      item.style.opacity = 0;
+      item.style.opacity = '0';
       item.style.transform = 'translateY(20px)';
       item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(item);
     });
-
-    // === Lazy Loading Fallback (if native not supported) ===
-    if ('loading' in HTMLImageElement.prototype) {
-      // Native lazy loading works
-    } else {
-      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-      const lazyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src || img.src;
-            lazyObserver.unobserve(img);
-          }
-        });
-      });
-      lazyImages.forEach(img => lazyObserver.observe(img));
-    }
   </script>
 </body>
 </html>
