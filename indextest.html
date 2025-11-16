@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Core Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empower Teams: AI as a Team Member — Automate Routine, Boost Productivity</title>
+  <meta name="description" content="Integrate AI into team processes: document processing, data analysis, client communication. Save 10+ hours weekly and reduce errors by 40%. Free demo in 15 minutes.">
+  
+  <!-- SEO & Structured Data -->
+  <link rel="canonical" href="https://empower-team.ai/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Empower Teams.AI",
+    "url": "https://empower-team.ai",
+    "logo": "https://empower-team.ai/logo.svg",
+    "sameAs": [
+      "https://linkedin.com/company/empower-teams",
+      "https://twitter.com/empowerteamsai"
+    ]
+  }
+  </script>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Empower Teams: AI as a Team Member">
+  <meta property="og:description" content="Automate routine, analytics, and growth. Schedule a free demo.">
+  <meta property="og:image" content="https://empower-team.ai/og-image.jpg">
+  <meta property="og:url" content="https://empower-team.ai">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts (max 2 fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Inline CSS (structured for single file) -->
+  <style>
+    /* === CSS Custom Properties === */
+    :root {
+      --primary: #007BFF;     /* Primary blue — AI theme */
+      --secondary: #6C757D;   /* Gray for secondary text */
+      --accent: #28A745;      /* Green for CTA/success */
+      --background: #F8F9FA;  /* Light background */
+      --surface: #FFFFFF;     /* Cards */
+      --text: #212529;        /* Main text */
+      --radius: 12px;         /* Border radius */
+      --transition: all 0.3s ease;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #121212;
+        --surface: #1E1E1E;
+        --text: #E9ECEF;
+        --secondary: #ADB5BD;
+      }
+    }
+
+    /* === Global Reset & Typography === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 100%; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 1rem;            /* ≥16px */
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--background);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a { color: var(--primary); text-decoration: none; transition: var(--transition); }
+    a:hover { opacity: 0.8; }
+    img { max-width: 100%; height: auto; display: block; }
+    button, input, textarea { font: inherit; }
+
+    /* === Layout Utilities === */
+    .container { width: min(90%, 1200px); margin: 0 auto; padding: 0 1rem; }
+    .section { padding: 4rem 0; }
+    .grid { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+    .text-center { text-align: center; }
+
+    /* === Header === */
+    header {
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      position: sticky; top: 0; z-index: 1000;
+    }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 0;
+    }
+    .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { font-weight: 600; }
+    .mobile-toggle { display: none; cursor: pointer; }
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--surface); padding: 1rem; box-shadow: var(--shadow); }
+      .nav-links.active { display: flex; }
+      .mobile-toggle { display: block; }
+    }
+
+    /* === Hero (Hero Section) === */
+    .hero {
+      background: linear-gradient(135deg, rgba(0,123,255,0.05), rgba(40,167,69,0.05));
+      padding: 6rem 0 4rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; color: var(--primary); }
+    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem; color: var(--secondary); }
+    .benefits { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+    .benefit { background: var(--surface); padding: 1rem 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); min-width: 200px; }
+    .benefit strong { display: block; font-size: 1.5rem; color: var(--accent); }
+
+    /* === CTA Button === */
+    .cta {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.875rem 2rem;
+      border: none;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cta:hover { background: #218838; transform: translateY(-2px); }
+    .cta-secondary { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+    .cta-secondary:hover { background: var(--primary); color: #fff; }
+
+    /* === Sections === */
+    .section-title { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: var(--primary); }
+    .card {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+    /* === Social Proof === */
+    .logos { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      gap: 2rem; 
+      margin: 2rem 0; 
+      opacity: 0.7; 
+      align-items: center;
+    }
+    .logos img { 
+      height: 40px; 
+      filter: grayscale(100%); 
+      transition: var(--transition); 
+      border-radius: var(--radius); 
+      box-shadow: var(--shadow); 
+    }
+    .logos img:hover { 
+      filter: grayscale(0%) brightness(1.1); 
+      transform: scale(1.05); 
+    }
+    @media (max-width: 768px) {
+      .logos { gap: 1.5rem; }
+      .logos img { height: 35px; }
+    }
+
+    .testimonial {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .testimonial::before { content: '“'; font-size: 4rem; position: absolute; top: -1rem; left: 1rem; color: var(--primary); opacity: 0.2; }
+    .testimonial-author { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
+    .testimonial-author img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+
+    /* === Team === */
+    .team-member { text-align: center; }
+    .team-member img { width: 120px; height: 120px; border-radius: 50%; margin-bottom: 1rem; object-fit: cover; }
+
+    /* === Blog Teaser === */
+    .blog-card { background: var(--surface); padding: 1.5rem; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .blog-card h3 { margin-bottom: 0.5rem; }
+    .blog-card time { font-size: 0.875rem; color: var(--secondary); }
+
+    /* === Footer === */
+    footer {
+      background: var(--surface);
+      margin-top: auto;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--secondary);
+    }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
+    .social { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .social a { font-size: 1.5rem; }
+
+    /* === Modal (for demo form) === */
+    .modal {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 2000;
+    }
+    .modal.active { display: flex; }
+    .modal-content {
+      background: var(--surface); padding: 2rem; border-radius: var(--radius); max-width: 500px; width: 90%; position: relative;
+    }
+    .modal-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+    /* === Form Styles === */
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ced4da; border-radius: var(--radius); }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,123,255,0.2); }
+
+    /* === Animations === */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .animate { animation: fadeIn 0.6s ease-out forwards; opacity: 0; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    /* === Responsive Adjustments === */
+    @media (max-width: 480px) {
+      .hero { padding: 4rem 0 3rem; }
+      .section { padding: 3rem 0; }
+      .benefit { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ==================== HEADER ==================== -->
+  <header role="banner">
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="Empower Teams — Home">Empower Teams</a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#services">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#team">Team</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu" id="mobileToggle">☰</button>
+    </div>
+  </header>
+
+  <!-- ==================== HERO (Hero Section) ==================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <h1 class="animate">AI as a Member of Your Team</h1>
+      <p class="animate delay-1">Automate routine tasks: document processing, data analysis, and client communication. Save 10+ hours per week and reduce errors by 40%.</p>
+      
+      <div class="benefits animate delay-2">
+        <div class="benefit"><strong>10h</strong> savings per week</div>
+        <div class="benefit"><strong>-40%</strong> errors</div>
+        <div class="benefit"><strong>30 min</strong> free consultation</div>
+      </div>
+      
+      <button class="cta animate delay-3" id="openDemo">
+        Request Free Consultation <span aria-hidden="true">→</span>
+      </button>
+      <p style="margin-top:0.5rem; font-size:0.875rem; color:var(--secondary);">30 min consultation • Free</p>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES (Features) ==================== -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title animate">What You'll Get</h2>
+      <div class="grid">
+        <div class="card animate delay-1">
+          <div class="feature-icon" role="img" aria-label="Analytics">📊</div>
+          <h3>AI Analytics</h3>
+          <p>Automatic reports on team performance and forecasts. <strong>Example:</strong> The system will alert you if a project is 15% behind schedule and suggest adjustments.</p>
+        </div>
+        <div class="card animate delay-2">
+          <div class="feature-icon" role="img" aria-label="Documents">📄</div>
+          <h3>Document Processing</h3>
+          <p>Data extraction from PDF/Word files and auto-filling templates. <strong>Example:</strong> Process 100 contracts in 5 minutes instead of 2 hours manually.</p>
+        </div>
+        <div class="card animate delay-3">
+          <div class="feature-icon" role="img" aria-label="Chatbot">💬</div>
+          <h3>Smart Chatbot</h3>
+          <p>24/7 client responses with CRM integration. <strong>Example:</strong> Handle 80% of queries without involving a manager.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOCIAL PROOF (Trusted By) ==================== -->
+  <section class="section" style="background:var(--background);" itemscope itemtype="https://schema.org/Organization">
+    <div class="container text-center">
+      <h2 class="section-title animate" itemprop="name">Trusted By</h2>
+      <p class="animate delay-1" style="max-width: 600px; margin: 0 auto 2rem; color: var(--secondary);">Leading companies in tech, defense, and innovation rely on Empower Teams for AI-driven Agile transformations.</p>
+      <div class="logos animate delay-2" role="list" aria-label="Partner and client logos">
+        <!-- Updated with raw GitHub URLs from https://github.com/Hazpay/empower-renovating/tree/main/Pics/logos -->
+        <!-- Note: If files don't exist, replace with actual paths or host locally for production -->
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/tufin.png" 
+             alt="Tufin Logo - Cybersecurity Leader" 
+             loading="lazy" 
+             height="40" 
+             itemprop="affiliate">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/elbit.png" 
+             alt="Elbit Systems Logo - Defense Technology" 
+             loading="lazy" 
+             height="40" 
+             itemprop="affiliate">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/intel.png" 
+             alt="Intel Logo - Semiconductor Innovator" 
+             loading="lazy" 
+             height="40" 
+             itemprop="affiliate">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/amdocs.png" 
+             alt="Amdocs Logo - Telecom Solutions" 
+             loading="lazy" 
+             height="40" 
+             itemprop="affiliate">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/philips.png" 
+             alt="Philips Logo - Health Technology" 
+             loading="lazy" 
+             height="40" 
+             itemprop="affiliate">
+        <img src="https://raw.githubusercontent.com/Hazpay/empower-renovating/main/Pics/logos/ge.png" 
+             alt="GE Logo - Industrial Conglomerate" 
+             loading="lazy" 
+             height="40" 
+             itemprop="affiliate">
+      </div>
+      <!-- Fallback if images fail: Add a subtle note -->
+      <noscript>
+        <p style="font-size: 0.875rem; color: var(--secondary); margin-top: 1rem;">View trusted partners: Tufin, Elbit, Intel, Amdocs, Philips, GE.</p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <h2 class="section-title animate">What Our Clients Say</h2>
+      <div class="grid">
+        <div class="testimonial animate delay-1">
+          <p>"AI analytics saved us from a deadline miss—the system predicted risks a week in advance."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50" alt="" loading="lazy">
+            <div>
+              <strong>Alex Johnson</strong><br>
+              <span>CEO, TechStart</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial animate delay-2">
+          <p>"Processing 500+ documents daily now takes just 10 minutes. Our team is free for strategic tasks."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50" alt="" loading="lazy">
+            <div>
+              <strong>Michael Davis</strong><br>
+              <span>CTO, DataFlow</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial animate delay-3">
+          <p>"The chatbot responds faster than our best manager. Conversion rates increased by 25%."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50" alt="" loading="lazy">
+            <div>
+              <strong>Emily Wilson</strong><br>
+              <span>Head of Sales, GrowEasy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TEAM ==================== -->
+  <section class="section" id="team" style="background:var(--background);">
+    <div class="container">
+      <h2 class="section-title animate">Our Team</h2>
+      <div class="grid">
+        <div class="team-member animate delay-1">
+          <img src="https://via.placeholder.com/120" alt="Photo of Dr. Dror Zernik" loading="lazy">
+          <h3>Dr. Dror Zernik</h3>
+          <p>CEO &amp; AI Strategist<br><em>30+ years in tech, 15+ in Agile coaching</em></p>
+        </div>
+        <div class="team-member animate delay-2">
+          <img src="https://via.placeholder.com/120" alt="Photo of Olga Kuznetsova" loading="lazy">
+          <h3>Olga Kuznetsova</h3>
+          <p>CTO &amp; ML Engineer<br><em>PhD in Machine Learning</em></p>
+        </div>
+        <div class="team-member animate delay-3">
+          <img src="https://via.placeholder.com/120" alt="Photo of Dmitry Volkov" loading="lazy">
+          <h3>Dmitry Volkov</h3>
+          <p>Head of Product<br><em>Ex-PM at Yandex</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BLOG TEASER ==================== -->
+  <section class="section" id="blog">
+    <div class="container">
+      <h2 class="section-title animate">Useful Resources</h2>
+      <div class="grid">
+        <article class="blog-card animate delay-1">
+          <time datetime="2025-10-20">October 20, 2025</time>
+          <h3>How to Implement AI in Small Business Without a Budget</h3>
+          <p>Step-by-step guide + free tools.</p>
+          <a href="#" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;">Read More →</a>
+        </article>
+        <article class="blog-card animate delay-2">
+          <time datetime="2025-09-15">September 15, 2025</time>
+          <h3>5 Metrics AI Can Improve in Your Team</h3>
+          <p>From speed to employee satisfaction.</p>
+          <a href="#" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;">Read More →</a>
+        </article>
+        <article class="blog-card animate delay-3">
+          <time datetime="2025-08-10">August 10, 2025</time>
+          <h3>Case Study: How AI Reduced Reporting Time by 90%</h3>
+          <p>A real client story.</p>
+          <a href="#" class="cta cta-secondary" style="padding:0.5rem 1rem; font-size:0.875rem;">Read More →</a>
+        </article>
+      </div>
+      <p class="text-center" style="margin-top:2rem;">
+        <a href="#" class="cta">All Articles →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer role="contentinfo" id="contact">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#services">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#team">Team</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <p>&copy; 2025 Empower Teams. All rights reserved.</p>
+      <p>
+        <a href="mailto:info@empower-team.ai">info@empower-team.ai</a> • 
+        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+      </p>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn" target="_blank">📱</a>
+        <a href="#" aria-label="Twitter" target="_blank">🐦</a>
+        <a href="#" aria-label="Telegram" target="_blank">✈️</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== DEMO MODAL ==================== -->
+  <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close" id="closeModal">×</button>
+      <h2 id="modalTitle">Request Demo</h2>
+      <form id="demoForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" placeholder="ABC Corp">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="3" placeholder="Tell us about your needs..."></textarea>
+        </div>
+        <button type="submit" class="cta" style="width:100%;">Submit Request</button>
+        <p style="font-size:0.75rem; margin-top:0.5rem; color:var(--secondary);">We'll respond within 1 hour.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== JS (ES6+, modular in single file) ==================== -->
+  <script>
+    // === Mobile Menu ===
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+
+    // === Demo Modal ===
+    const openBtn = document.getElementById('openDemo');
+    const modal = document.getElementById('demoModal');
+    const closeBtn = document.getElementById('closeModal');
+    const form = document.getElementById('demoForm');
+
+    openBtn.addEventListener('click', () => modal.classList.add('active'));
+    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('active')) modal.classList.remove('active'); });
+
+    // === Form Validation (real-time + submit) ===
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      const data = new FormData(form);
+      // Example submission (replace with your endpoint)
+      try {
+        // await fetch('/api/demo', { method: 'POST', body: data });
+        alert('Request submitted! We\'ll contact you soon.');
+        modal.classList.remove('active');
+        form.reset();
+      } catch (err) {
+        alert('Submission error. Please try again.');
+      }
+    });
+
+    // === Scroll Animations (Intersection Observer) ===
+    const animItems = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    animItems.forEach(item => {
+      item.style.opacity = 0;
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(item);
+    });
+
+    // === Lazy Loading Fallback (if native not supported) ===
+    if ('loading' in HTMLImageElement.prototype) {
+      // Native lazy loading works
+    } else {
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      const lazyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src || img.src;
+            lazyObserver.unobserve(img);
+          }
+        });
+      });
+      lazyImages.forEach(img => lazyObserver.observe(img));
+    }
+  </script>
+</body>
+</html>
